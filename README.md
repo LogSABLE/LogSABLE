@@ -2,7 +2,7 @@
 
 **Semantic Augmentation of Backbone Log Detectors with Executable Evidence**
 
-LogSABLE is a plug-in framework that enhances existing log anomaly detectors (DeepLog, LogAnomaly, LogBERT, NeuralLog, LogRobust) with semantic evidence from local patterns, LLM reasoning, and cluster-derived rules—without replacing the backbone training pipeline.
+LogSABLE is a plug-in framework that enhances existing log anomaly detectors (DeepLog, LogAnomaly, LogBERT, NeuralLog) with semantic evidence from local patterns, LLM reasoning, and cluster-derived rules—without replacing the backbone training pipeline.
 
 ## Abstract
 
