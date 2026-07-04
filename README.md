@@ -42,7 +42,7 @@ Please download the datasets from their original sources and place them in the a
 |---------|--------|-----------------|
 | HDFS | [LogHub – HDFS Dataset](https://github.com/logpai/loghub/tree/master/HDFS) | `hdfs_data/` |
 | BGL | [LogHub – BGL Dataset](https://github.com/logpai/loghub/tree/master/BGL) | `bgl/` |
-| Liberty | [Liberty Dataset]([https://github.com/guanwei49/LogLLM](http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/liberty2.gz)) | `liberty/` |
+| Liberty | [Liberty Dataset](http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/liberty2.gz) | `liberty/` |
 
 ### Notes
 
