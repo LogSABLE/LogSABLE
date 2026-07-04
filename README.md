@@ -32,6 +32,24 @@ We evaluate LogSABLE on **HDFS**, **BGL**, and **Liberty** using DeepLog, LogAno
 
 ![RQ4: F1 under different training-set percentages](docs/images/rq4_2.png)
 
+## Datasets
+
+The full datasets used in this work are not included in this repository because they occupy several gigabytes and exceed GitHub's storage limits.
+
+Please download the datasets from their original sources and place them in the appropriate directories before running the experiments.
+
+| Dataset | Source | Local directory |
+|---------|--------|-----------------|
+| HDFS | [LogHub – HDFS Dataset](https://github.com/logpai/loghub/tree/master/HDFS) | `hdfs_data/` |
+| BGL | [LogHub – BGL Dataset](https://github.com/logpai/loghub/tree/master/BGL) | `bgl/` |
+| Liberty | [LogLLM repository](https://github.com/guanwei49/LogLLM) | `liberty/` |
+
+### Notes
+
+- This repository contains only the code, configuration files, and small metadata files required to reproduce the experiments.
+- Large datasets were intentionally excluded to keep the repository lightweight and within GitHub's file size limits.
+- Please refer to the original dataset licenses and citation requirements when using these datasets.
+
 ## Setup
 
 ```bash
