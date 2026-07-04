@@ -1,0 +1,81 @@
+run:
+  seed: 43
+  device: "cpu"        # "auto" (cuda > mps > cpu) | "mps" | "cpu" | "cuda:0"
+  timing_csv: "Results/run_training_inference.csv"
+
+data:
+  dataset: "BGL"       # "HDFS" | "BGL" | "Thunderbird" | "Spirit" | "Liberty"
+  data_dir: "bgl"      # "hdfs_data" | "bgl" | "thunderbird" | "spirit" | "liberty"
+  window: 20
+  stride: 1
+  train_size: null     # null: train gets remainder 1 - val - test
+  val_size: 0.10
+  test_size: 0.20
+  group_split: true
+  liberty_bucket_sec: 100
+  liberty_filename: "liberty_150k.csv"
+
+cluster:
+  enabled: true
+  source: "train"
+  vectorizer: "tfidf-eid"  # "tfidf-eid" | "tfidf-template"
+  min_cluster_size: 10
+  min_samples: null
+  metric: "euclidean"      # "euclidean" | "cosine"
+  select_k: 3
+
+model:
+  name: "logbert"     # "neurallog" | "deeplog" | "logbert" | "loganomaly"
+  vocab_from: "EventId"
+  loganomaly:
+    embed_dim: 64
+    hidden_size: 128
+    num_layers: 2
+    dropout: 0.1
+  neurallog:
+    d_model: 128
+    dropout: 0.1
+  deeplog:
+    hidden_size: 64
+    num_layers: 1
+    dropout: 0.1
+    embed_dim: 64
+  logbert:
+    d_model: 256
+    nhead: 8
+    num_layers: 4
+    dim_ff: 1024
+    dropout: 0.1
+    max_len: 512
+    session_policy: max
+    k_of_n: 2
+
+train:
+  batch_size: 128
+  epochs: 8
+  lr: 1e-3
+  weight_decay: 0.01
+  num_workers: 0
+  pin_memory: false
+
+eval:
+  dynamic_min_conf: 0.65
+  dropout_at_eval: true
+  base_gate_enabled: true
+  hdfs_dynamic_hi_min_conf_candidates: [0.0, 0.5, 0.6, 0.7, 0.8]
+  hdfs_dynamic_low_conf_max: 0.80
+  hdfs_dynamic_low_conf_candidates: [0.74, 0.76, 0.77, 0.78, 0.79, 0.80, 0.81, 0.82, 0.83]
+  liberty_dynamic_min_conf: 0.80
+
+llm:
+  enabled: true
+  model: "gpt-4o-mini-2024-07-18"
+  session_preview_k: 20
+  max_sessions: null
+  max_clusters: null
+  sleep_s: 0.0
+  use_cache: true
+  cross_run_cache: true
+  export_prompts: false
+  debug_sessions_jsonl: "debug_llm_sessions.jsonl"
+  debug_clusters_jsonl: "debug_llm_clusters.jsonl"

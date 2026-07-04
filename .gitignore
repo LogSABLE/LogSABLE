@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Large datasets (do not track)
+hdfs_data/HDFS_100k.log_structured.csv
+liberty/liberty_10pct.csv
+liberty/liberty_150k.csv
+bgl/BGL_2k.log_structured.csv
