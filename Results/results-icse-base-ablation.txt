@@ -1,0 +1,77 @@
+################################################################################
+LIBERTY
+DEEPLOG
+[FINAL HYBRID] (Liberty: base+ngram_or, val_ngram_F1=1.000) P=0.944 R=0.981 F1=0.962
+[ABL] hybrid_no_llm          TEST P=0.911 R=0.981 F1=0.944 (Δ vs full -1.87)
+[ABL] hybrid_no_ngram        TEST P=0.861 R=0.596 F1=0.705 (Δ vs full -26.72)
+[ABL] hybrid_no_cluster      TEST P=0.911 R=0.981 F1=0.944 (Δ vs full -1.87)
+
+NEURALLOG
+[FINAL HYBRID] (Liberty: base+ngram_or, val_ngram_F1=1.000) P=0.773 R=0.981 F1=0.864
+[ABL] hybrid_no_llm          TEST P=1.000 R=0.981 F1=0.839 (Δ vs full -2.89)
+[ABL] hybrid_no_ngram        TEST P=0.951 R=0.750 F1=0.839 (Δ vs full -2.89)
+[ABL] hybrid_no_cluster      TEST P=0.951 R=0.750 F1=0.839 (Δ vs full -2.89)
+
+LOGBERT
+[FINAL HYBRID] (Liberty: ngram_only, val_ngram_F1=1.000, val_base_F1=0.393) P=1.000 R=0.981 F1=0.990
+[ABL] hybrid_no_llm          TEST P=1.000 R=0.981 F1=0.900 (Δ vs full -9.09)
+[ABL] hybrid_no_ngram        TEST P=1.000 R=0.712 F1=0.831 (Δ vs full -16.16)
+[ABL] hybrid_no_cluster      TEST P=1.000 R=0.712 F1=0.831 (Δ vs full -16.16)
+
+LOGANOMALY
+[FINAL HYBRID] (Liberty: base+ngram_or, val_ngram_F1=1.000) P=1.000 R=1.000 F1=1.000
+[ABL] hybrid_no_llm          TEST P=1.000 R=1.000 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_ngram        TEST P=1.000 R=1.000 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_cluster      TEST P=1.000 R=1.000 F1=1.000 (Δ vs full 0.00)
+
+################################################################################
+BGL
+DEEPLOG
+[FINAL HYBRID] (4-way_or, dynamic_conf=0.5) P=0.999 R=1.000 F1=0.999
+[ABL] hybrid_no_llm          TEST P=0.999 R=1.000 F1=0.999 (Δ vs full 0.00)
+[ABL] hybrid_no_ngram        TEST P=0.999 R=1.000 F1=0.999 (Δ vs full 0.00)
+[ABL] hybrid_no_cluster      TEST P=0.999 R=0.942 F1=0.970 (Δ vs full -3.00)
+
+NEURALLOG
+[FINAL HYBRID] (strategy=vote2, val_hybrid_F1=0.999) P=1.000 R=1.000 F1=1.000
+[ABL] hybrid_no_llm          TEST P=0.999 R=1.000 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_ngram        TEST P=0.999 R=1.000 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_cluster      TEST P=0.999 R=0.902 F1=0.948 (Δ vs full -5.20)
+
+LOGBERT
+[FINAL HYBRID] (strategy=and, val_hybrid_F1=0.999) P=1.000 R=0.999 F1=1.000
+[ABL] hybrid_no_llm          TEST P=1.000 R=0.999 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_ngram        TEST P=1.000 R=0.390 F1=0.561 (Δ vs full -43.90)
+[ABL] hybrid_no_cluster      TEST P=0.950 R=1.000 F1=0.974 (Δ vs full -2.60)
+
+LOGANOMALY
+[FINAL HYBRID] (strategy=vote2, val_hybrid_F1=0.999) P=1.000 R=1.000 F1=1.000
+[ABL] hybrid_no_llm          TEST P=0.999 R=1.000 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_ngram        TEST P=0.999 R=1.000 F1=1.000 (Δ vs full 0.00)
+[ABL] hybrid_no_cluster      TEST P=0.999 R=0.948 F1=0.973 (Δ vs full -2.70)
+
+################################################################################
+HDFS
+DEEPLOG
+[FINAL HYBRID] (strategy=vote2, val_hybrid_F1=0.915) P=0.841 R=0.999 F1=0.913
+[ABL] hybrid_no_llm          TEST P=0.836 R=0.999 F1=0.910 (Δ vs full -0.33)
+[ABL] hybrid_no_ngram        TEST P=0.831 R=0.885 F1=0.857 (Δ vs full -6.13)
+[ABL] hybrid_no_cluster      TEST P=0.983 R=0.847 F1=0.910 (Δ vs full -0.33)
+
+NEURALLOG
+[FINAL HYBRID] (strategy=vote2, val_hybrid_F1=0.911) P=0.834 R=1.000 F1=0.910
+[ABL] hybrid_no_llm          TEST P=0.834 R=1.000 F1=0.910 (Δ vs full 0.00)
+[ABL] hybrid_no_ngram        TEST P=0.829 R=0.887 F1=0.857 (Δ vs full -5.82)
+[ABL] hybrid_no_cluster      TEST P=0.983 R=0.849 F1=0.910 (Δ vs full 0.00)
+
+LOGBERT
+[FINAL HYBRID] (4-way, dynamic_conf=0.5, strategy=vote3) P=0.998 R=0.981 F1=0.990
+[ABL] hybrid_no_llm          TEST P=0.970 R=0.960 F1=0.965 (Δ vs full -2.53)
+[ABL] hybrid_no_ngram        TEST P=0.979 R=0.223 F1=0.363 (Δ vs full -63.33)
+[ABL] hybrid_no_cluster      TEST P=0.697 R=0.961 F1=0.808 (Δ vs full -18.38)
+
+LOGANOMALY
+[FINAL HYBRID] (strategy=vote2, val_hybrid_F1=0.925) P=0.852 R=0.999 F1=0.919
+[ABL] hybrid_no_llm          TEST P=0.833 R=0.999 F1=0.909 (Δ vs full -1.09)
+[ABL] hybrid_no_ngram        TEST P=0.828 R=0.888 F1=0.857 (Δ vs full -6.75)
+[ABL] hybrid_no_cluster      TEST P=0.983 R=0.850 F1=0.912 (Δ vs full -0.76)

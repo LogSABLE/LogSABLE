@@ -1,0 +1,15 @@
+
+# Large datasets
+bgl/BGL_2k.log_structured.csv
+hdfs_data/HDFS_100k.log_structured.csv
+liberty/liberty_150k.csv
+
+# Python generated files
+__pycache__/
+*.pyc
+.venv/
+
+# Secrets
+.env
+.env.*
+!.env.example

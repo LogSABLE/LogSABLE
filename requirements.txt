@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+scikit-learn
+torch
+tqdm
+transformers
+sentence-transformers
+hdbscan
+pyyaml
+python-dotenv
+openai

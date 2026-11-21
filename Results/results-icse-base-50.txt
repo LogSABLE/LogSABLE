@@ -1,0 +1,53 @@
+################################################################################
+LIBERTY
+DEEPLOG
+[FINAL HYBRID] P=0.98 R=0.98 F1=0.98
+[ABL] base_model P=0.96 R=0.51 F1=0.67
+
+NEURALLOG
+[FINAL HYBRID] P=0.81 R=0.98 F1=0.89
+[ABL] base_model P=0.70 R=0.55 F1=0.62
+
+LOGBERT
+[FINAL HYBRID] P=0.93 R=0.98 F1=0.95
+[ABL] base_model P=0.78 R=0.28 F1=0.41
+
+LOGANOMALY
+[FINAL HYBRID] P=0.94 R=1.00 F1=0.97
+[ABL] base_model P=0.94 R=1.00 F1=0.97
+
+################################################################################
+BGL
+DEEPLOG
+[FINAL HYBRID] P=1.00 R=1.00 F1=1.00
+[ABL] base_model P=1.00 R=0.95 F1=0.98
+
+NEURALLOG
+[FINAL HYBRID] P=1.00 R=1.00 F1=1.00
+[ABL] base_model P=1.00 R=0.96 F1=0.98
+
+LOGBERT
+[FINAL HYBRID] P=1.00 R=1.00 F1=1.00
+[ABL] base_model P=0.66 R=1.00 F1=0.79
+
+LOGANOMALY
+[FINAL HYBRID] P=1.00 R=1.00 F1=1.00
+[ABL] base_model P=1.00 R=0.95 F1=0.97
+
+################################################################################
+HDFS
+DEEPLOG
+[FINAL HYBRID] P=0.87 R=1.00 F1=0.93
+[ABL] base_model P=0.87 R=0.87 F1=0.87
+
+NEURALLOG
+[FINAL HYBRID] P=0.85 R=1.00 F1=0.91
+[ABL] base_model P=0.84 R=0.87 F1=0.86
+
+LOGBERT
+[FINAL HYBRID] P=1.00 R=0.98 F1=0.99
+[ABL] base_model P=0.92 R=0.79 F1=0.85
+
+LOGANOMALY
+[FINAL HYBRID] P=0.87 R=1.00 F1=0.93
+[ABL] base_model P=0.87 R=0.88 F1=0.88
